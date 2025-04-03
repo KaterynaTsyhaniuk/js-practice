@@ -180,12 +180,73 @@
 // Якщо число кратне 3, повертає "Divisible by 3"
 // Інакше повертає "Not divisible by 3"
 
-function isDivisibleBy3(num) {
-  return num % 3 === 0 ? 'Divisible by 3' : 'not divisible by 3';
-}
+// function isDivisibleBy3(num) {
+//   return num % 3 === 0 ? 'Divisible by 3' : 'not divisible by 3';
+// }
 
-isDivisibleBy3();
-console.log(isDivisibleBy3(9)); // "Divisible by 3"
-console.log(isDivisibleBy3(10)); // "Not divisible by 3"
-console.log(isDivisibleBy3(21)); // "Divisible by 3"
-console.log(isDivisibleBy3(3));
+// isDivisibleBy3();
+// console.log(isDivisibleBy3(9)); // "Divisible by 3"
+// console.log(isDivisibleBy3(10)); // "Not divisible by 3"
+// console.log(isDivisibleBy3(21)); // "Divisible by 3"
+// console.log(isDivisibleBy3(3));
+
+////////////////////////////////////////////////
+// function getMax(a, b) {
+//   // if (a > b) {
+//   //   return a;
+//   // } else if (b > a) {
+//   //   return b;
+//   // } else {
+//   //   return 'Number are equal';
+//   // }
+//   /// або
+//   return a > b ? a : b > a ? b : 'Number are equal';
+// }
+// getMax();
+// console.log(getMax(10, 5)); // 10
+// console.log(getMax(3, 8)); // 8
+// console.log(getMax(7, 7)); // "Numbers are equal"
+
+/////////////////////////////////////////////////////
+// function checkTemperature(temp) {
+//   if (temp < 0) {
+//     return 'Freezing';
+//   } else if (temp >= 0 && temp < 20) {
+//     return 'Cold';
+//   } else if (temp >= 20 && temp < 30) {
+//     return 'Warm';
+//   } else if (temp >= 30) {
+//     return 'Hot';
+//   }
+// }
+
+// checkTemperature();
+
+// console.log(checkTemperature(-5)); // "Freezing"
+// console.log(checkTemperature(10)); // "Cold"
+// console.log(checkTemperature(25)); // "Warm"
+// console.log(checkTemperature(35)); // "Hot"
+
+//////////////////////////////////////////////
+
+// function isDivisibleBy5(num) {
+//   return num % 5 === 0 ? 'Divisible by 5' : 'Not divisible by 5';
+// }
+
+// isDivisibleBy5();
+// console.log(isDivisibleBy5(10)); // "Divisible by 5"
+// console.log(isDivisibleBy5(7)); // "Not divisible by 5"
+// console.log(isDivisibleBy5(25)); // "Divisible by 5"
+
+///////////////////////////////////////////////////
+
+// function checkNumberType(num) {
+//   return num > 0 ? 'positive' : num < 0 ? 'negative' : 'zero';
+// }
+
+// checkNumberType();
+// console.log(checkNumberType(10)); // "Positive"
+// console.log(checkNumberType(0)); // "Zero"
+// console.log(checkNumberType(-3)); // "Negative"
+
+////////////////////////////////////////////////////////
