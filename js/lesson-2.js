@@ -396,30 +396,176 @@
 // console.log(checkForSpam('Get rid of sPaM emails. Our book in on sale!')); // true
 // console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
 
-///4.
-function getShippingCost(country) {
-  let price;
-  switch (country) {
-    case 'China':
-      price = 100;
-      return `Shipping to ${country} will cost ${price} credits`;
-    case 'Chile':
-      price = 250;
-      return `Shipping to ${country} will cost ${price} credits`;
-    case 'Australia':
-      price = 170;
-      return `Shipping to ${country} will cost ${price} credits`;
-    case 'Jamaica':
-      price = 120;
-      return `Shipping to ${country} will cost ${price} credits`;
-    default:
-      return 'Sorry, there is no delivery to your country';
-  }
-}
+// ///4.
+// function getShippingCost(country) {
+//   let price;
+//   switch (country) {
+//     case 'China':
+//       price = 100;
+//       return `Shipping to ${country} will cost ${price} credits`;
+//     case 'Chile':
+//       price = 250;
+//       return `Shipping to ${country} will cost ${price} credits`;
+//     case 'Australia':
+//       price = 170;
+//       return `Shipping to ${country} will cost ${price} credits`;
+//     case 'Jamaica':
+//       price = 120;
+//       return `Shipping to ${country} will cost ${price} credits`;
+//     default:
+//       return 'Sorry, there is no delivery to your country';
+//   }
+// }
 
-console.log(getShippingCost('Australia')); // "Shipping to Australia will cost 170 credits"
-console.log(getShippingCost('Germany')); // "Sorry, there is no delivery to your country"
-console.log(getShippingCost('China')); // "Shipping to China will cost 100 credits"
-console.log(getShippingCost('Chile')); // "Shipping to Chile will cost 250 credits"
-console.log(getShippingCost('Jamaica')); // "Shipping to Jamaica will cost 120 credits"
-console.log(getShippingCost('Sweden')); // "Sorry, there is no delivery to your country"
+// console.log(getShippingCost('Australia')); // "Shipping to Australia will cost 170 credits"
+// console.log(getShippingCost('Germany')); // "Sorry, there is no delivery to your country"
+// console.log(getShippingCost('China')); // "Shipping to China will cost 100 credits"
+// console.log(getShippingCost('Chile')); // "Shipping to Chile will cost 250 credits"
+// console.log(getShippingCost('Jamaica')); // "Shipping to Jamaica will cost 120 credits"
+// console.log(getShippingCost('Sweden')); // "Sorry, there is no delivery to your country"
+
+// function getShortText(text) {
+//   return text.slice(0, 10);
+// }
+// console.log(getShortText('JavaScript is awesome!')); // "JavaScript"
+
+// function normalizeEmail(email) {
+//   return email.toLowerCase();
+// }
+// console.log(normalizeEmail('John.Smith@Example.COM')); // "john.smith@example.com"
+
+// function shoutMessage(message) {
+//   return message.toUpperCase();
+// }
+// console.log(shoutMessage('hello world')); // "HELLO WORLD"
+
+// function containsWord(text, word) {
+//   return text.includes(word);
+// }
+
+// console.log(containsWord('I love JavaScript', 'love')); // true
+// console.log(containsWord('I love JavaScript', 'Python')); // false
+// console.log(containsWord('I love JavaScript', 'I')); // true
+// console.log(containsWord('I love JavaScript', 'JavaScript')); // true
+// console.log(containsWord('I love JavaScript', 'Gmail')); // true
+
+// function getPosition(text, searchTerm) {
+//   return text.indexOf(searchTerm);
+// }
+// console.log(getPosition('Frontend Developer', 'Dev')); // 9
+// console.log(getPosition('Frontend Developer', 'React')); // -1
+// console.log(getPosition('Frontend Developer', 'loper')); // 13
+// console.log(getPosition('Frontend Developer', 'Fro')); // 0
+
+// function hasKeyword(text, keyword) {
+//   return text.toLowerCase().includes(keyword.toLowerCase());
+// }
+
+// console.log(hasKeyword('Learning JavaScript is fun!', 'javascript')); // true
+// console.log(hasKeyword('I love coding', 'Code')); //false
+// console.log(hasKeyword('Frontend developer', 'backend')); //false
+
+// function hasKeyword(text, keyword) {
+//   return text.toLowerCase().includes(keyword.toLowerCase());
+// }
+
+// console.log(hasKeyword('Learning JavaScript is fun!', 'javascript')); // true
+// console.log(hasKeyword('I love coding', 'Coding')); // true ✅
+// console.log(hasKeyword('Frontend developer', 'backend')); // false
+
+/////////////  Цикл for()
+// console.log('Before');
+
+// for (let start = 1; start <= 10; start++) {
+//   console.log('Hello', start);
+// }
+
+// console.log('After');
+
+// function printEvenNumbers(n) {
+//   for (let i = 2; i <= n; i += 2) {
+//     console.log(i);
+//   }
+// }
+
+// printEvenNumbers(30);
+// // Виведе:2 4 6 8 10... ///
+
+// function countVowels(str) {
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     const char = str[i].toLowerCase();
+//     if ('aeiou'.includes(char)) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(countVowels('Hello my dear husband'));
+
+// function countConsonant(str) {
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     const char = str[i].toLowerCase();
+//     if ('qwrtyupsdfghjklzxcvbnm'.includes(char)) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+// console.log(countConsonant('Hello my dear husband'));
+
+// function reverseString(str) {
+//   let result = '';
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     result += str[i];
+//   }
+
+//   return result;
+// }
+// console.log(reverseString('hello'));
+// // "olleh"
+// console.log(reverseString('JavaScript')); // "tpircSavaJ"
+
+// function printLetters(str) {
+//   for (let i = 0; i < str.length; i++) {
+//     console.log(str[i]);
+//   }
+// }
+
+// printReversedLetters('kateryna');
+
+// function countVowels(str) {
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     const char = str[i].toLowerCase();
+//     if ('ioaue'.includes(char)) {
+//       count++;
+//       console.log(`${i}:`, char);
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(countVowels('moa niu lea'));
+// function countVowels(str) {
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     const char = str[i].toLowerCase();
+
+//     console.log(`${i}:`, char);
+//   }
+//   return count;
+// }
+
+// console.log(countVowels('dog'));
+
+// function calculateTotal(number) {
+//   let sum = 0;
+//   for (let i = 0; i <= number; i += 1) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+// console.log(calculateTotal(5));
