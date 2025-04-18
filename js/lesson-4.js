@@ -621,26 +621,79 @@
 //{fullname: 'Olena Ivanova', city: 'Lviv', age: 25, email: 'olena@example.com'}
 
 ////////////////////////////////////////////////////////////////////////////////
-const defaultSettings = {
-  theme: 'light',
-  notifications: true,
-  compactMode: false,
-};
+// const defaultSettings = {
+//   theme: 'light',
+//   notifications: true,
+//   compactMode: false,
+// };
 
-const userSettings = {
-  theme: 'dark',
-  compactMode: true,
-};
+// const userSettings = {
+//   theme: 'dark',
+//   compactMode: true,
+// };
 
-function applySettings(defaults, updates) {
-  const allSettings = { ...defaults, ...updates }; // обєдднання через spred
-  console.log(allSettings);
-  if (Object.keys(updates).length === 0) {
-    return false;
-  } else {
-    allSettings.updated = true; // додаємо updated якщо не порожній обєкт
-    return allSettings; /// повертаємо новий обєкт
-  }
-}
+// function applySettings(defaults, updates) {
+//   const allSettings = { ...defaults, ...updates }; // обєдднання через spred
+//   console.log(allSettings);
+//   if (Object.keys(updates).length === 0) {
+//     return false;
+//   } else {
+//     allSettings.updated = true; // додаємо updated якщо не порожній обєкт
+//     return allSettings; /// повертаємо новий обєкт
+//   }
+// }
 
-applySettings(defaultSettings, userSettings);
+// applySettings(defaultSettings, userSettings);
+/////////////////////////////////////////////////////////////////////////
+
+// const users = [
+//   {
+//     name: 'Anna',
+//     messages: ['Hi!', 'How are you?'],
+//     isActive: false,
+//     getSummary() {
+//       return `User ${this.name} has ${this.messages.length} messages.`;
+//     },
+//   },
+//   {
+//     name: 'Bohdan',
+//     messages: ['Hello'],
+//     isActive: true,
+//     getSummary() {
+//       return `User ${this.name} has ${this.messages.length} messages.`;
+//     },
+//   },
+//   {
+//     name: 'Oksana',
+//     messages: ['Good morning', 'Any news?', 'Let’s meet!'],
+//     isActive: false,
+//     getSummary() {
+//       return `User ${this.name} has ${this.messages.length} messages.`;
+//     },
+//   },
+// ];
+
+// const activeUsers = users.filter(user => user.isActive);
+// if (activeUsers.length === 0) {
+//   console.log('No active users');
+// } else {
+//   for (const user of users) {
+//     const res = user.getSummary();
+//     console.log(res);
+//   }
+// }
+////////////////////////////////////////////////////////////////
+// const isActiveSummary = [];
+// for (const user of users) {
+//   if (user.isActive === true) {
+//     isActiveSummary.push(user.getSummary());
+//   }
+// }
+
+// if (isActiveSummary.length === 0) {
+//   console.log('No active users found');
+// } else {
+//   console.log(isActiveSummary);
+// } ////// ['User Bohdan has 1 messages.']
+
+////////////////////////////////////////////////////////////////
