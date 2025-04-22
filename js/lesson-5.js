@@ -179,7 +179,7 @@ const cars = [
     year: 2021,
     color: 'Yellow',
     price: 20000,
-    amount: 4,
+    amount: 0,
     isSportCar: false,
     type: 'Hatchback',
   },
@@ -189,7 +189,7 @@ const cars = [
     year: 2022,
     color: 'White',
     price: 30000,
-    amount: 0,
+    amount: 1,
     isSportCar: false,
     type: 'SUV',
   },
@@ -901,3 +901,98 @@ const cars = [
 // const indexCar = cars.findIndex(car => car.year === 2022);
 
 // console.log(indexCar);
+
+////////////////// Складніші задачки
+
+//.....Знайти всі машини з ціною вище 50000 і відсортувати їх за роком випуску від нових до старих.
+// const filterCars = cars
+//   .filter(car => car.price > 50000)
+//   .toSorted((a, b) => b.year - a.year);
+
+// console.table(filterCars);
+
+//.....Перевірити, чи всі машини на складі доступні для продажу та створити новий масив, що містить лише моделі доступних машин.
+// так як every повертає нам булеве значення, ми неможемо зробити з ним ланцюжок викликів
+// const everyCarsSale = cars.every(car => car.amount > 0);
+// console.table(everyCarsSale);
+
+// const availableCars = cars.filter(car => car.amount > 0).map(car => car.model);
+// console.table(availableCars);
+
+//.....Знайти першу машину, яка не є спортивною та має кількість на на складі більше 0, потім повернути її колір.
+// const findOneCar = cars.find(car => !car.isSportCar && car.amount > 0)?.color;
+
+// console.log(findOneCar);
+
+// //....Порахувати загальну вартість всіх машин з кількістю на складі більше 2 і ціною менше 40 000.
+
+// const filterCars = cars
+//   .filter(car => car.amount > 2 && car.price < 40000)
+//   .reduce((acc, car) => {
+//     return acc + car.price * car.amount;
+//   }, 0);
+
+// console.log(filterCars);
+
+// //////.......Знайти всі машини певного типу (наприклад, SUV), відсортувати їх за роком випуску від старих до нових і повернути масив тільки зі своїми моделями.
+
+// const filterCars = cars
+//   .filter(car => car.type === 'SUV')
+//   .toSorted((a, b) => a.year - b.year)
+//   .map(car => car.model);
+
+// console.log(filterCars);
+
+////.....Знайти всі спортивні машини з ціною вище 60000, відсортувати їх за спаданням ціни і повернути масив, що містить лише бренди цих машин.
+
+// const filterIsSportCars = cars
+//   .filter(car => car.isSportCar && car.price > 60000)
+//   .toSorted((a, b) => b.price - a.price)
+//   .map(car => car.brand);
+// console.log(filterIsSportCars); ['Ferrari', 'Lamborghini', 'Porsche', 'BMW'];
+
+///....Знайти всі машини заданого кольору (наприклад, "Blue") та року випуску після 2020, відсортувати їх за зростанням ціни та повернути масив, що містить лише моделі цих машин.
+
+// const filterCars = cars
+//   .filter(car => car.color === 'Red' && car.year > 2020)
+//   .toSorted((a, b) => a.price - b.price)
+//   .map(car => car.model);
+// console.log(filterCars); //['Mustang', '488 GTB']
+
+/////....Перевірити, чи всі машини заданої марки доступні для продажу та повернути масив, що містить лише кольори доступних машин.
+
+// const everyCarsSale = cars.every(car => car.amount > 0);
+// const availableCars = cars.filter(car => car.amount > 0).map(car => car.color);
+// console.log(everyCarsSale);
+// console.log(availableCars);
+
+///....Знайти індекс першої машини з ціною менше 20000 та повернути масив, що містить тільки бренди та моделі машин після знайденої.
+
+// const indexCar = cars.findIndex(car => car.price > 25000);
+// const arrCarBrandAndModel = cars
+//   .map(car => `${car.brand} - ${car.model}`)
+//   .slice(2);
+
+// console.log(indexCar);
+// console.log(arrCarBrandAndModel);
+
+//..Знайти всі машини з ціною між 40000 та 60000, відсортувати їх за роком випуску від нових до старих і повернути масив, що містить тільки моделі цих машин.
+
+// const filterCarsByPrice = cars
+//   .filter(car => car.price > 40000 && car.price < 60000)
+//   .toSorted((a, b) => b.year - a.year)
+//   .map(car => car.model);
+
+// console.log(filterCarsByPrice); //['Mustang', 'A4', 'RX', 'Camaro']
+
+//.....Перевірити, чи є хоч одна машина з кількістю на складі більше 5 і ціною вище 70 000.
+
+// const onlyOneCar = cars.some(car => car.amount > 5 && car.price > 70000);
+// console.log(onlyOneCar); // false
+
+//...Знайти всі машини, у яких кількість на складі більша за 0, відсортувати їх по спаданню кількості та повернути масив, що містить тільки бренди та моделі цих машин.
+// const filterCarsByAmount = cars
+//   .filter(car => car.amount > 0)
+//   .toSorted((a, b) => b.amount - a.amount)
+//   .map(car => `${car.brand} - ${car.model}`);
+// console.log(filterCarsByAmount);
