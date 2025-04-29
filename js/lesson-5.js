@@ -32,7 +32,7 @@
 //   console.log(el);
 // });
 
-const cars = [
+export const cars = [
   {
     brand: 'Toyota',
     model: 'Camry',

@@ -1,0 +1,264 @@
+body {
+  font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+  line-height: 1.5;
+  color: #2a2a2a;
+}
+
+.magic-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.magic-btn > .icon {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+.site-nav__link {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.site-nav__link:hover {
+  text-decoration: underline;
+}
+
+.site-nav__link--current {
+  color: tomato;
+}
+
+.color-picker__option {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.transaction-table {
+  border-collapse: collapse;
+}
+
+.transaction-table th,
+.transaction-table td {
+  padding: 8px;
+  border: 1px solid #2a2a2a;
+}
+
+.title__link {
+  display: inline-flex;
+  margin-left: 40px;
+}
+
+.table-item {
+  text-align: center;
+}
+
+.withdraw {
+  background-color: rgba(255, 81, 81, 0.146);
+}
+
+.deposit {
+  background-color: rgba(157, 255, 157, 0.429);
+}
+
+.my-item {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.even {
+  background-color: #2a2a2a;
+  color: white;
+}
+.odd {
+  background-color: #aa6a6a;
+  color: white;
+}
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-item {
+  border: 1px solid black;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  border-radius: 15px;
+  margin: 15px;
+}
+
+.fruit-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fruit-item {
+  border: 1px solid black;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  border-radius: 15px;
+  margin: 15px;
+}
+
+.car-item {
+  border: 1px solid black;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  border-radius: 15px;
+  margin: 15px;
+}
+
+.car-item.sport-car {
+  border-color: tomato;
+}
+
+.fruit-item.season {
+  border-color: greenyellow;
+}
+
+.book-item.classic {
+  border-color: rgb(71, 132, 255);
+}
+
+.car-item * {
+  padding: 0;
+  margin: 0;
+}
+
+.car-item img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.book-item img {
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+  line-height: 1.5;
+  color: #2a2a2a;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+input {
+  font: inherit;
+}
+
+.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80vw;
+  gap: 10px;
+}
+
+.car-item {
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.car-item img {
+  width: 100%;
+  min-height: 130px;
+}
+
+.car-info {
+  padding: 10px;
+}
+
+.car-item h3,
+.car-item p {
+  margin: 0;
+}
+
+.car-search {
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  gap: 10px;
+}
+.car-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-box {
+  border: 1px solid red;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+}
+
+input {
+  outline: none;
+}
+.valid {
+  border: 1px solid rgb(78, 200, 78);
+}
+.invalid {
+  border: 1px solid red;
+}
+
+.three-btn {
+  margin-bottom: 20px;
+}

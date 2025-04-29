@@ -195,73 +195,217 @@
  * гетер та сетер login та email.
  */
 
-class User1 {
-  #login;
-  #email;
-  constructor(obj) {
-    this.#login = obj.login;
-    this.#email = obj.email;
-  }
-  get login() {
-    return this.#login;
-  }
-  get email() {
-    return this.#email;
-  }
+// class User1 {
+//   #login;
+//   #email;
+//   constructor(obj) {
+//     this.#login = obj.login;
+//     this.#email = obj.email;
+//   }
+//   get login() {
+//     return this.#login;
+//   }
+//   get email() {
+//     return this.#email;
+//   }
 
-  set login(value) {
-    return (this.#login = value);
-  }
+//   set login(value) {
+//     return (this.#login = value);
+//   }
 
-  set email(value) {
-    return (this.#email = value);
-  }
-}
+//   set email(value) {
+//     return (this.#email = value);
+//   }
+// }
 
-const mango1 = new User1({
-  login: 'Mango',
-  email: 'mango@dog.woof',
-});
+// const mango1 = new User1({
+//   login: 'Mango',
+//   email: 'mango@dog.woof',
+// });
 
-console.log(mango1.login); // Mango
-mango1.login = 'Mangodoge';
-console.log(mango1.login); // Mangodoge
+// console.log(mango1.login); // Mango
+// mango1.login = 'Mangodoge';
+// console.log(mango1.login); // Mangodoge
 
-/**
- * Напиши клас Storage який створює об'єкти для керування складом товарів.
- * При виклику отримуватиме один аргумент - початковий масив товарів і
- * записуватиме його властивість items.
- *
- * Додай методи класу:
- * - getItems() - повертає масив товарів.
- * - addItem(item) - отримує новий товар і додає його до поточних.
- * - removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних.
- */
+// /**
+//  * Напиши клас Storage який створює об'єкти для керування складом товарів.
+//  * При виклику отримуватиме один аргумент - початковий масив товарів і
+//  * записуватиме його властивість items.
+//  *
+//  * Додай методи класу:
+//  * - getItems() - повертає масив товарів.
+//  * - addItem(item) - отримує новий товар і додає його до поточних.
+//  * - removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних.
+//  */
 
-class Storage {
-  constructor(items) {
-    this.items = items;
-  }
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
 
-  getItems() {
-    return this.items;
-  }
+//   getItems() {
+//     return this.items;
+//   }
 
-  addItem(item) {
-    this.items.push(item);
-  }
-  removeItem(item) {
-    this.items = this.items.filter(el => el !== item);
-  }
-}
-const storage = new Storage(['🍎', '🍋', '🍇', '🍑']);
+//   addItem(item) {
+//     this.items.push(item);
+//   }
+//   removeItem(item) {
+//     this.items = this.items.filter(el => el !== item);
+//   }
+// }
+// const storage = new Storage(['🍎', '🍋', '🍇', '🍑']);
 
-const items = storage.getItems();
-//
-console.table(items); // [ '🍎', '🍋', '🍇', '🍑' ]
+// const items = storage.getItems();
+// //
+// console.table(items); // [ '🍎', '🍋', '🍇', '🍑' ]
 
-storage.addItem('🍌');
-console.table(storage.items); // [ '🍎', '🍋', '🍇', '🍑', '🍌' ]
+// storage.addItem('🍌');
+// console.table(storage.items); // [ '🍎', '🍋', '🍇', '🍑', '🍌' ]
 
-storage.removeItem('🍋');
-console.table(storage.items); // [ '🍎', '🍇', '🍑', '🍌' ]
+// storage.removeItem('🍋');
+// console.table(storage.items); // [ '🍎', '🍇', '🍑', '🍌' ]
+
+//////////////////////////////////////////
+// class Car {
+//   constructor(obj) {
+//     this.brand = obj.brand;
+//     this.model = obj.model;
+//     this.price = obj.price;
+//   }
+
+//   getDescription() {
+//     return `Car ${this.brand} ${this.model} costs $${this.price}`;
+//   }
+
+//   changePrice(newPrice) {
+//     this.price = newPrice;
+//   }
+// }
+
+// const myCar = new Car({
+//   brand: 'Toyota',
+//   model: 'Corolla',
+//   price: 22000,
+// });
+
+// console.log(myCar.getDescription());
+// // Очікувано: "Car Toyota Corolla costs $22000"
+
+// myCar.changePrice(20000);
+
+// console.log(myCar.getDescription());
+// // Очікувано: "Car Toyota Corolla costs $20000"
+
+//////////////////////////////////////////////////////
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+//   getItems() {
+//     return this.items;
+//   }
+
+//   addItem(item) {
+//     this.items.push(item);
+//   }
+//   removeItem(item) {
+//     this.items = this.items.filter(el => el !== item);
+//   }
+// }
+
+// const storage = new Storage(['🍎', '🍌', '🍇']);
+// console.log(storage.getItems()); // ['🍎', '🍇', '🍓']
+// storage.addItem('🍓');
+// console.log(storage.getItems());
+// storage.removeItem('🍌');
+// console.log(storage.getItems());
+
+////////////////////////////////////////////////////////
+// class StringBuilder {
+//   constructor(value) {
+//     this.value = value;
+//   }
+
+//   getValue() {
+//     return this.value;
+//   }
+//   padStart(str) {
+//     this.value = str + this.value;
+//   }
+
+//   padEnd(str) {
+//     this.value += str;
+//   }
+//   padBoth(str) {
+//     this.value = str + this.value + str;
+//   }
+// }
+
+// const builder = new StringBuilder('.');
+// console.log(builder.getValue()); //.
+// builder.padStart('^');
+// console.log(builder.getValue()); //^.
+// builder.padEnd('^');
+// console.log(builder.getValue()); // '^.^'
+// builder.padBoth('=');
+// console.log(builder.getValue()); // =^.^=
+
+/////////////////////////////////////////////////////
+
+// class Toggle {
+//   constructor({ isOpen = false } = {}) {
+//     this.isOpen = isOpen;
+//   }
+//   toggle() {
+//     return (this.isOpen = !this.isOpen);
+//   }
+// }
+// const toggle1 = new Toggle({ isOpen: true });
+// console.log(toggle1.isOpen);
+
+// toggle1.toggle();
+// console.log(toggle1.isOpen); //false
+
+// toggle1.toggle();
+// console.log(toggle1.isOpen); // true
+
+// toggle1.toggle();
+// console.log(toggle1.isOpen); //false
+
+////////////////////////////////////////////////////
+
+// class Notes {
+//   constructor(items) {
+//     this.items = items;
+//   }
+
+//   addNote(note) {
+//     this.items.push(note);
+//   }
+//   removeNote(text) {
+//     this.items = this.items.filter(el => el.text !== text);
+//   }
+//   updatePriority(text, newPriority) {
+//     const note = this.items.find(el => el.text === text);
+//     if (note) {
+//       note.priority = newPriority;
+//     }
+//   }
+// }
+// const myNotes = new Notes([
+//   { text: 'Buy groceries', priority: 'high' },
+//   { text: 'Read a book', priority: 'normal' },
+// ]);
+
+// console.log(myNotes.items); // [{ text: 'Buy groceries', priority: 'high' }, { text: 'Read a book', priority: 'normal' }]
+
+// myNotes.addNote({ text: 'Do workout', priority: 'low' });
+// console.log(myNotes.items);
+// // [{...}, {...}, { text: 'Do workout', priority: 'low' }]
+// myNotes.removeNote('Read a book');
+// console.log(myNotes.items);
+// // [{ text: 'Buy groceries', priority: 'high' }, { text: 'Do workout', priority: 'low' }]
+// myNotes.updatePriority('Do workout', 'high');
+// console.log(myNotes.items);
+// // [{ text: 'Buy groceries', priority: 'high' }, { text: 'Do workout', priority: 'high' }]
