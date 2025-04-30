@@ -147,6 +147,10 @@ body {
   border-color: greenyellow;
 }
 
+.travel-item.worldWonder {
+  border-color: greenyellow;
+}
+
 .book-item.classic {
   border-color: rgb(71, 132, 255);
 }
@@ -201,16 +205,42 @@ input {
   gap: 10px;
 }
 
+.travel-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
 .car-item {
   width: 200px;
   border: 1px solid black;
   border-radius: 10px;
   overflow: hidden;
+  background-color: white;
+}
+
+.travel-item {
+  list-style: none;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
 }
 
 .car-item img {
   width: 100%;
   min-height: 130px;
+}
+
+.travel-item img {
+  width: 100%;
+  min-height: 100px;
+}
+
+.travel-item h3,
+.travel-item p {
+  margin: 0;
 }
 
 .car-info {
